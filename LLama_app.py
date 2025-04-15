@@ -2,7 +2,8 @@ import os
 import streamlit as st
 from langchain_groq import ChatGroq
 from langchain.prompts import ChatPromptTemplate
-from langchain.output_parsers import StrOutputParser
+from langchain_core.output_parsers import StrOutputParser
+
 
 # Load API key from Streamlit secrets
 api_key = st.secrets["GROQ_API_KEY"]
