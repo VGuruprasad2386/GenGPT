@@ -1,6 +1,6 @@
 streamlit
 python-dotenv
 langchain
-git+https://github.com/langchain-ai/langchain-groq.git
+langchain-groq
 langchain-core
 
