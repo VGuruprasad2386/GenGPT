@@ -1,13 +1,11 @@
 import os
 import streamlit as st
-from dotenv import load_dotenv
 from langchain_groq import ChatGroq
 from langchain.prompts import ChatPromptTemplate
 from langchain.output_parsers import StrOutputParser
 
 # Load environment variables
-load_dotenv()
-api_key = os.getenv("GROQ_API_KEY")
+api_key = st.secrets("GROQ_API_KEY")
 
 # Check if the API key is loaded correctly
 if not api_key:
