@@ -4,13 +4,8 @@ from langchain_groq import ChatGroq
 from langchain.prompts import ChatPromptTemplate
 from langchain.output_parsers import StrOutputParser
 
-# Load environment variables
-api_key = st.secrets("GROQ_API_KEY")
-
-# Check if the API key is loaded correctly
-if not api_key:
-    st.error("❌ GROQ_API_KEY is missing! Please set it in your .env file.")
-    st.stop()
+# Load API key from Streamlit secrets
+api_key = st.secrets["GROQ_API_KEY"]
 
 # Initialize ChatGroq with the specified model
 llm = ChatGroq(api_key=api_key, model="llama3-70b-8192", temperature=0.2)
