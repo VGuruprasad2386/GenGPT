@@ -3,3 +3,4 @@ python-dotenv
 langchain
 langchain-core
 langchain-groq
+git+https://github.com/langchain-ai/langchain-groq.git
